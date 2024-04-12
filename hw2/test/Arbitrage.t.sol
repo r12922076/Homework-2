@@ -79,6 +79,24 @@ contract Arbitrage is Test {
         /**
          * Please add your solution below
          */
+        
+        // Set up the token swap path
+        address[] memory path = new address[](5);
+        path[0] = address(tokenB);
+        path[1] = address(tokenA);
+        path[2] = address(tokenD);
+        path[3] = address(tokenC);
+        path[4] = address(tokenB);
+
+        // Execute the swap operation
+        router.swapExactTokensForTokens(
+            5 ether,              // Use 5 ether of tokenB for the swap
+            0,                    // Set a very low minimum return amount (ideally, you should calculate this value to avoid excessive slippage)
+            path,                 // The token path set up previously
+            arbitrager,           // The address to receive the final tokens
+            block.timestamp + 300 // Set the deadline to 300 seconds after the transaction starts
+        );
+
         /**
          * Please add your solution above
          */
