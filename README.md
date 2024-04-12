@@ -67,7 +67,7 @@ Investigate the minting function in the UniswapV2Pair contract. When depositing 
 > ```
 > 如果我們將其寫成數學式子，會像是
 > $$L = \min\left(\frac{A}{A_{\text{res}}} \cdot L_{\text{total}}, \frac{B}{B_{\text{res}}} \cdot L_{\text{total}}\right)$$
-> 其中 $A_{\text{res}}$ 和 $B_{\text{res}}$ 是原本池中代幣 A 和 B 的儲備量，而$L_{\text{total}}$ 則是原本 LP 代幣的總供應量。
+> 其中 $A_{\text{res}}$ 和 $B_{\text{res}}$ 是原本池中代幣 A 和 B 的儲備量，而 $L_{\text{total}}$ 則是原本 LP 代幣的總供應量。
 > 
 > 這種設計會有幾個好處，分別是
 > 1. **比例所有權**：此公式可確保發行的 LP 代幣量與存款人添加的流動性相比於當前池大小的比例成比例，可維持所有權分配的公平性，以確保存款人在池中的份額準確反映其貢獻。
